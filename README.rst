@@ -17,10 +17,9 @@ Features
 Usage
 -----
 
-    cookiecutter https://github.com/iknite/cookiecutter-ansible-role.git
-
-It begin to ask you configuration variables then you can enter tasks names,
-handlers names, and default variables. 
+    git clone git@github.com:ltalirz/cookiecutter-ansible-role.git
+    pip install cookiecutter
+    cookiecutter cookiecutter-ansible-role
 
 Inside a `Add <some> name i.e (<example>)` you can go to next section by entering
 an empty string.
@@ -30,20 +29,6 @@ Example::
 
     ROLE CONFIGURATION:
     ===================
-
-    Should it have tasks?  [Y/n] 
-      Add task name i.e (Install packages) Add some task
-      Add task name i.e (Install packages) another task 
-      Add task name i.e (Install packages) 
-
-    Should it have handlers? [Y/n] 
-      Add handler name i.e (Restart uwsgi) restart something
-      Add handler name i.e (Restart uwsgi) alert someone
-      Add handler name i.e (Restart uwsgi) 
-
-    It should contain default variables?:  [Y/n] 
-      Add variable i.e (operator: : drunken_master) var: name
-      Add variable i.e (operator: : drunken_master)      
 
     Should it have meta info?  [Y/n] 
      - Should it have dependencies?  [Y/n] 
@@ -82,4 +67,3 @@ License
 * 3-clause BSD license.
 * Copyright ©2014, Enrique Paredes
 * Enjoy it!
-

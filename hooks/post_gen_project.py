@@ -14,24 +14,24 @@ except NameError:
 
 folders = OrderedDict()
 
-folders['tasks']= {
-    'question': '\nShould it have tasks? ',
-    'hint': '  Add task name i.e (Install packages) ',
-    'action': '- name: {}\n  # TODO\n\n'
-}
-
-folders['handlers'] = {
-    'question': '\nShould it have handlers?',
-    'hint': '  Add handler name i.e (Restart uwsgi) ',
-    'action': '- name: {}\n  # TODO\n\n'
-}
-
-folders['defaults'] = {
-    'question': '\nIt should contain default variables?: ',
-    'hint': '  Add variable i.e (operator: drunken_master) ',
-    'action': '{}\n\n'
-}
-
+#folders['tasks']= {
+#    'question': '\nShould it have tasks? ',
+#    'hint': '  Add task name i.e (Install packages) ',
+#    'action': '- name: {}\n  # TODO\n\n'
+#}
+#
+#folders['handlers'] = {
+#    'question': '\nShould it have handlers?',
+#    'hint': '  Add handler name i.e (Restart uwsgi) ',
+#    'action': '- name: {}\n  # TODO\n\n'
+#}
+#
+#folders['defaults'] = {
+#    'question': '\nIt should contain default variables?: ',
+#    'hint': '  Add variable i.e (operator: drunken_master) ',
+#    'action': '{}\n\n'
+#}
+#
 folders['meta']= {
     'question': '\nShould it have meta info? ',
     'pre_hint': ' - Should it have dependencies? ',
@@ -39,14 +39,14 @@ folders['meta']= {
     'hint': '    Add dependency i.e ({role: aptsupercow, var: \'value\'}) ',
     'action': '  - {}\n'
 }
-
-folders['templates'] = {
-    'question': '\nShould it have templates? ',
-}
-
-folders['files'] = {
-    'question': '\nShould it have files? ',
-}
+#
+#folders['templates'] = {
+#    'question': '\nShould it have templates? ',
+#}
+#
+#folders['files'] = {
+#    'question': '\nShould it have files? ',
+#}
 
 
 def configure_role():
