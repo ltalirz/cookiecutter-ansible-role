@@ -16,6 +16,7 @@ services:
   - docker
 
 before_install:
+  - 'sudo docker --version'
   - 'sudo docker pull ${docker_image}:${version}'
 
 script:
