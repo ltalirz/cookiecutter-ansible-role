@@ -1,4 +1,6 @@
 ---
 - hosts: localhost
   roles:
-  - {{cookiecutter.role_name}}
+  - role: {{cookiecutter.role_name}}
+    vars:
+      cloud_platform: docker
