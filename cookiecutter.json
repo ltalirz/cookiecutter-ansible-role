@@ -1,8 +1,9 @@
 {
   "role_name": "quantum-espresso",
+  "repo_name": "ansible-role-{{cookiecutter.role_name}}",
   "short_description": "An Ansible role that installs [Quantum ESPRESSO](http://www.quantum-espresso.org) on Ubuntu.",
-  "version": "master",
   "org_name": "marvel-nccr",
+  "version": "master",
   "full_name": "MARVEL NCCR",
   "year": "2018",
   "min_ansible_version": "2.5",

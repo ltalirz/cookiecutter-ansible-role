@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/{{cookiecutter.org_name}}/{{cookiecutter.repo_name}}.svg?branch=master)](https://travis-ci.org/{{cookiecutter.org_name}}/{{cookiecutter.repo_name}})
+
 # Ansible Role: {{cookiecutter.org_name}}.{{cookiecutter.role_name}}
 
 {{cookiecutter.short_description}}
