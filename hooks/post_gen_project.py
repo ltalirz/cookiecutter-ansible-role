@@ -64,7 +64,7 @@ def configure_role():
                 with open('{}/main.yml'.format(folder_name), 'a') as fp:
 
                     if 'pre_hint' in folder:
-                        if read_user_yes_no(folder['pre_hint'], default_value=u'yes'):
+                        if read_user_yes_no(folder['pre_hint'], default_value=u'no'):
                             fp.write(folder['pre_action'])
                         else:
                             continue
