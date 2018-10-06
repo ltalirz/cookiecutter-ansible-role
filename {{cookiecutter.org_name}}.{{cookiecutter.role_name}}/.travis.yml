@@ -2,18 +2,26 @@
 # Adapted from https://github.com/drhelius/travis-ansible-demo/blob/master/.travis.yml
 sudo: required
 
-env:
-  global:
-    - ansible_role: {{cookiecutter.role_name}}
-    - container_id: ansible-container
-
-  matrix:
-    - docker_image: marvelnccr/ubuntu-docker-base
-      version: 1.0
-      ansible_user: ubuntu
-
 services:
   - docker
+
+env:
+  global:
+    - ansible_role: {{ cookiecutter.role_name }}
+    - container_id: ansible-container
+
+matrix:
+  include:
+    - name: Ubuntu-18.04
+      env:
+        - docker_image: marvelnccr/ubuntu-docker-base
+        - version: 2.1
+        - ansible_user: ubuntu
+    - name: Ubuntu-16.04
+      env:
+        - docker_image: marvelnccr/ubuntu-docker-base
+        - version: 1.0
+        - ansible_user: ubuntu
 
 before_install:
   - 'sudo docker --version'
