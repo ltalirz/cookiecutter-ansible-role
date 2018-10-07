@@ -14,9 +14,11 @@ See `defaults/main.yml`
 
 ## Example Playbook
 
-  - hosts: servers
-    roles:
-    - role: {{cookiecutter.org_name}}.{{cookiecutter.role_name}}
+```
+- hosts: servers
+  roles:
+  - role: {{cookiecutter.org_name}}.{{cookiecutter.role_name}}
+```
 
 ## License
 
