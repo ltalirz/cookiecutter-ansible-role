@@ -20,7 +20,7 @@ matrix:
     - name: Ubuntu-16.04
       env:
         - docker_image: marvelnccr/ubuntu-docker-base
-        - version: 1.0
+        - version: 1.1
         - ansible_user: ubuntu
 
 before_install:
@@ -29,6 +29,7 @@ before_install:
 
 script:
   - 'sudo docker run --name ${container_id} --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro --volume="${PWD}":/etc/ansible/roles/${ansible_role}:ro ${docker_image}:${version}'
+  - 'sudo docker exec --user ${ansible_user} "${container_id}" env ANSIBLE_FORCE_COLOR=1 ansible-playbook --version'
   - 'sudo docker exec --user ${ansible_user} "${container_id}" env ANSIBLE_FORCE_COLOR=1 ansible-playbook -v /etc/ansible/roles/${ansible_role}/tests/test.yml --syntax-check'
   - 'sudo docker exec --user ${ansible_user} "${container_id}" env ANSIBLE_FORCE_COLOR=1 ansible-playbook -v /etc/ansible/roles/${ansible_role}/tests/test.yml'
   - >
