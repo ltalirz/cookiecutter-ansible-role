@@ -18,6 +18,8 @@ provisioner:
     name: ansible-lint
   playbooks:
     converge: playbook.yml
+  options:
+    v: true
 scenario:
   name: default
 verifier:
