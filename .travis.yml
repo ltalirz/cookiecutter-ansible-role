@@ -30,8 +30,6 @@ install:
 - pip install molecule docker
 
 before_script:
-  # Use actual Ansible Galaxy role name for the project directory.
-  - mv ansible-role-$ANSIBLE_ROLE marvel-nccr.$ANSIBLE_ROLE
   - cd marvel-nccr.$ANSIBLE_ROLE
 
 script:
