@@ -14,11 +14,22 @@ See `defaults/main.yml`
 
 ## Example Playbook
 
-```
+```yaml
 - hosts: servers
   roles:
   - role: {{cookiecutter.org_name}}.{{cookiecutter.role_name}}
 ```
+
+## Tests
+
+This role uses [Molecule](https://molecule.readthedocs.io/en/latest/#) and
+Docker for tests. Once Docker is installed, run tests using
+
+```bash
+pip install -r requirements.txt
+molecule test
+```
+
 
 ## License
 

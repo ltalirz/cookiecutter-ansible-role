@@ -1,0 +1,7 @@
+# for running
+ansible>={{ cookiecutter.min_ansible_version }}
+# for testing
+molecule
+docker
+pre-commit
+yamllint

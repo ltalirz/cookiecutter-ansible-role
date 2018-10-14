@@ -79,4 +79,5 @@ def configure_role():
 
 
 if __name__ == '__main__':
-    configure_role()
+    pass
+    #configure_role()
