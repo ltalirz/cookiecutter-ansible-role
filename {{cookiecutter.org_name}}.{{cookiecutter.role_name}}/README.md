@@ -20,15 +20,17 @@ See `defaults/main.yml`
   - role: {{cookiecutter.org_name}}.{{cookiecutter.role_name}}
 ```
 
-## Tests
+## Development and testing
 
-This role uses [Molecule](https://molecule.readthedocs.io/en/latest/#) and
-Docker for tests. Once Docker is installed, run tests using
+This role uses [Molecule](https://molecule.readthedocs.io/en/latest/#) and [Docker](https://www.docker.com/) for tests.
 
-```bash
-pip install -r requirements.txt
-molecule test
+After installing [Docker](https://www.docker.com/):
 ```
+git clone https://github.com/{{cookiecutter.org_name}}/{{cookiecutter.repo_name}} {{cookiecutter.org_name}}.{{cookiecutter.role_name}}
+# Note: folder name {{cookiecutter.org_name}}.{{cookiecutter.role_name}} is required for running tests
+cd marvel-nccr.aiida
+pip install -r requirements.txt  # Installs molecule
+molecule test  # runs tests
 
 ## License
 
