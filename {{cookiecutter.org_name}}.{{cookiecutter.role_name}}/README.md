@@ -25,12 +25,13 @@ See `defaults/main.yml`
 This role uses [Molecule](https://molecule.readthedocs.io/en/latest/#) and [Docker](https://www.docker.com/) for tests.
 
 After installing [Docker](https://www.docker.com/):
-```
+```bash
 git clone https://github.com/{{cookiecutter.org_name}}/{{cookiecutter.repo_name}} {{cookiecutter.org_name}}.{{cookiecutter.role_name}}
 # Note: folder name {{cookiecutter.org_name}}.{{cookiecutter.role_name}} is required for running tests
 cd marvel-nccr.aiida
 pip install -r requirements.txt  # Installs molecule
 molecule test  # runs tests
+```
 
 ## License
 
