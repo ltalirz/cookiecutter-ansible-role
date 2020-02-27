@@ -8,8 +8,7 @@ env:
   global:
     - ANSIBLE_ROLE: quantum_espresso
 
-matrix:
-  include:
+  matrix:
     - name: Ubuntu-18.04
       env:
         - DOCKER_IMAGE: marvelnccr/ubuntu-docker-base
@@ -27,10 +26,10 @@ install:
 - pip install -U pip wheel setuptools
 - pip install cookiecutter
 - cookiecutter --no-input .
-- pip install molecule docker
 
 before_script:
   - cd marvel-nccr.$ANSIBLE_ROLE
+  - pip install -r requirements.txt
 
 script:
   - molecule test

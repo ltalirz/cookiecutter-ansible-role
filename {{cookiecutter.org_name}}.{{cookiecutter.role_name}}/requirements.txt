@@ -1,7 +1,7 @@
 # for running
-ansible>={{ cookiecutter.min_ansible_version }}
+ansible~={{ cookiecutter.min_ansible_version }}
 # for testing
-molecule
 docker
-pre-commit
-yamllint
+molecule~=3.0
+yamllint~=1.17
+ansible-lint~=4.1
