@@ -1,24 +1,23 @@
----
 language: python
 services:
-  - docker
+- docker
 cache: pip
 
 env:
   global:
-    - ANSIBLE_ROLE: quantum_espresso
+  - ANSIBLE_ROLE: quantum_espresso
 
   matrix:
-    - name: Ubuntu-18.04
-      env:
-        - DOCKER_IMAGE: marvelnccr/ubuntu-docker-base
-        - DOCKER_IMAGE_VERSION: 2.2
-        - ANSIBLE_USER: ubuntu
-    - name: Ubuntu-16.04
-      env:
-        - DOCKER_IMAGE: marvelnccr/ubuntu-docker-base
-        - DOCKER_IMAGE_VERSION: 1.1
-        - ANSIBLE_USER: ubuntu
+  - name: Ubuntu-18.04
+    env:
+    - DOCKER_IMAGE: marvelnccr/ubuntu-docker-base
+    - DOCKER_IMAGE_VERSION: 2.2
+    - ANSIBLE_USER: ubuntu
+  - name: Ubuntu-16.04
+    env:
+    - DOCKER_IMAGE: marvelnccr/ubuntu-docker-base
+    - DOCKER_IMAGE_VERSION: 1.1
+    - ANSIBLE_USER: ubuntu
 
 
 install:
@@ -28,8 +27,8 @@ install:
 - cookiecutter --no-input .
 
 before_script:
-  - cd marvel-nccr.$ANSIBLE_ROLE
-  - pip install -r requirements.txt
+- cd marvel-nccr.$ANSIBLE_ROLE
+- pip install -r requirements.txt
 
 script:
-  - molecule test
+- molecule test

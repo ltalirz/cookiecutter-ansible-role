@@ -1,19 +1,18 @@
----
 allow_duplicates: {{ cookiecutter.allow_duplicates }}
 
 galaxy_info:
-  role_name: {{ cookiecutter.role_name }}
+  role_name: {{cookiecutter.role_name }}
   author: "{{ cookiecutter.full_name }}"
   # yamllint disable-line rule:line-length
   description: "{{ cookiecutter.short_description }}"
   license: MIT
-  min_ansible_version: {{ cookiecutter.min_ansible_version }}
+  min_ansible_version: {{cookiecutter.min_ansible_version }}
   platforms:
-    - name: Ubuntu
-      versions:
-        - xenial
-        - bionic
+  - name: Ubuntu
+    versions:
+    - xenial
+    - bionic
   galaxy_tags:
-    - ubuntu
-    - application
-    - science
+  - ubuntu
+  - application
+  - science
