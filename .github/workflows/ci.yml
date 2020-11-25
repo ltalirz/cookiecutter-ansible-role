@@ -26,7 +26,7 @@ jobs:
         pip --version
     
     - name: Install requirements
-      run: pip install cookiecutter tox wheel
+      run: pip install cookiecutter pre-commit tox wheel
 
     - name: Run the cookiecutter
       run: cookiecutter --no-input .
