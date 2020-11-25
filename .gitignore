@@ -1,4 +1,6 @@
 *.*~
 .*.swp
 .*.swo
-marvel-nccr.quantum_espresso/
+.tox/
+.vscode/
+marvel-nccr.test/

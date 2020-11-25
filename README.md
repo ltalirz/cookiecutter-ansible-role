@@ -17,5 +17,4 @@ cookiecutter https://github.com/marvel-nccr/cookiecutter-ansible-role.git
 
 ## License
 
-Based on [iknite/cookiecutter-ansible-role](https://github.com/iknite/cookiecutter-ansible-role).
 See [LICENSE](LICENSE) file.

@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+    tags:
+    - 'v*'
+  pull_request:
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps: 
+
+    - uses: actions/checkout@v2
+
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Upgrade pip
+      run: |
+        pip install --upgrade pip
+        pip --version
+    
+    - name: Install requirements
+      run: pip install cookiecutter pre-commit tox wheel
+
+    - name: Run the cookiecutter
+      run: cookiecutter --no-input .
+
+    - name: setup the folder as a git repo
+      run: |
+        git init
+        git add -A
+      working-directory: "marvel-nccr.test"
+
+    - name: run pre-commit
+      run: pre-commit run --all
+      working-directory: "marvel-nccr.test"
+      
+    - name: run molecule via tox
+      run: tox
+      working-directory: "marvel-nccr.test"
